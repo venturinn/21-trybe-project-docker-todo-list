@@ -22,4 +22,4 @@ ENV FRONT_PORT 3000
 RUN npm install
 
 #Ao iniciar a imagem deve rodar o comando npm test
-CMD ["npm test"]
+ENTRYPOINT ["npm", "test"]

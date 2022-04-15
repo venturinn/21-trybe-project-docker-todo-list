@@ -25,4 +25,5 @@ ENV REACT_APP_API_PORT 3001
 EXPOSE 3000
 
 #Ao iniciar a imagem deve rodar o comando npm start
-CMD ["npm start"]
+ENTRYPOINT ["npm", "start"]
+
