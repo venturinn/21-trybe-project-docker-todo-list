@@ -17,4 +17,4 @@ RUN npm install
 EXPOSE 3001
 
 #Ao iniciar a imagem deve rodar o comando npm start
-CMD npm start
+CMD ["npm start"]
