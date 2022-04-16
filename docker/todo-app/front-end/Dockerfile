@@ -2,18 +2,16 @@
 FROM node:14-alpine
 
 # Definindo um diretório de trabalho
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copiar todos os arquivos da pasta front-end para a imagem ("COPY source dest")
-COPY . .
+COPY . ./
 
 # Deve adicionar o arquivo node_modules.tar.gz a imagem, de maneira que ele seja extraído dentro do container
-ADD ./node_modules.tar.gz .
+ADD node_modules.tar.gz .
 
 # Instalar a aplicação utilizando o comando `npm install`
 RUN npm install
-
-# COPY . .
 
 # `REACT_APP_API_HOST`: padrão `localhost`
 # *(Docker)* Aqui você deve indicar o nome do container do `back-end`

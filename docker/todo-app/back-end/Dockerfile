@@ -2,13 +2,13 @@
 FROM node:14-alpine
 
 # Definindo um diretório de trabalho
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copiar todos os arquivos da pasta back-end para a imagem ("COPY source dest")
-COPY . .
+COPY . ./
 
 # Deve adicionar o arquivo node_modules.tar.gz a imagem
-ADD ./node_modules.tar.gz .
+ADD node_modules.tar.gz .
 
 # Instalar a aplicação utilizando o comando `npm install`
 RUN npm install
