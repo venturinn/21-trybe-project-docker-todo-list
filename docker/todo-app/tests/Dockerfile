@@ -5,10 +5,10 @@ FROM mjgargani/puppeteer:trybe1.0 AS build
 WORKDIR /app
 
 # Copiar todos os arquivos da pasta tests para a imagem ("COPY source dest")
-COPY . ./
+COPY . .
 
 # Deve adicionar o arquivo node_modules.tar.gz a imagem
-ADD ./node_modules.tar.gz ./
+ADD ./node_modules.tar.gz .
 
 # `FRONT_HOST`: padrão `localhost`;
 # *(Docker)* Aqui você deve indicar o nome do container do `front-end`;
